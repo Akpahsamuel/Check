@@ -1,6 +1,8 @@
 import { HardhatUserConfig } from "hardhat/config";
 import * as dotenvenc from "@chainlink/env-enc"
-dotenvenc.config()
+//dotenvenc.config()
+require ('dotenv').config()
+ 
 import "@nomicfoundation/hardhat-toolbox";
 
 const LISK_SEPOLIA_RPC_URL = process.env.LISK_SEPOLIA_RPC_URL
@@ -15,16 +17,16 @@ const config: HardhatUserConfig = {
       accounts: ACCOUNTS ? [ACCOUNTS] : [],
       chainId: 4202
    },
-   arbitrumSepolia:{
-      url: ARBITRUM_SEPOLIA_RPC_URL || "",
-      accounts: ACCOUNTS ? [ACCOUNTS] : [],
-      chainId: 421614
-   },
-   optimismSepolia:{
-      url: OPTIMISM_SEPOLIA_RPC_URL || "",
-      accounts: ACCOUNTS ? [ACCOUNTS] : [],
-      chainId: 11155420
-   },
+   // arbitrumSepolia:{
+   //    url: ARBITRUM_SEPOLIA_RPC_URL || "",
+   //    accounts: ACCOUNTS ? [ACCOUNTS] : [],
+   //    chainId: 421614
+   // },
+   // optimismSepolia:{
+   //    url: OPTIMISM_SEPOLIA_RPC_URL || "",
+   //    accounts: ACCOUNTS ? [ACCOUNTS] : [],
+   //    chainId: 11155420
+   // },
   },
   etherscan: {
    apiKey: "123",
