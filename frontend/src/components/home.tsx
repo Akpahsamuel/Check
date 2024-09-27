@@ -66,7 +66,7 @@ export default function HomePage() {
             </div>
          </div>
          <div className="w-full h-[30rem]  bg-blue-300 relative max-sm:pt-[5rem] ">
-         <DrugExplorer />
+         {/* <DrugExplorer /> */}
          </div>
          <RegisterModal close={register} closeFn={setRegister} />
          <Modal close={registerDrug} closeFn={setRegisterDrug} />

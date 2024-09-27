@@ -54,9 +54,11 @@ const Modal = ({ close, closeFn }: { close: boolean, closeFn: Function }) => {
          });
          const results = await uploadRequest.json();
          setCid(results.url);
-         const id = await contract.methods.registerDrug(results.cid).send({ from: account.address })
-         toast.success(`Drug Registered`)
-         return await id.events.RegisteredDrug.returnValues.drugId;
+         if (results) {
+            const id = await contract.methods.registerDrug(results.cid).send({ from: account.address })
+            toast.success(`Drug Registered`)
+            return await id.events.RegisteredDrug.returnValues.drugId;
+         }
       } catch (e) {
          console.log(e);
       }

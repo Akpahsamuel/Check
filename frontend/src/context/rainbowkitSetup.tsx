@@ -8,7 +8,7 @@ import {QueryClientProvider, QueryClient} from "@tanstack/react-query"
 const config = getDefaultConfig({
    appName: "drugLedger",
    projectId: process.env.NEXT_PUBLIC_APP_ID as string,
-   chains: [optimismSepolia],
+   chains: [liskSepolia],
    ssr: true
 })
 
