@@ -8,7 +8,7 @@ import GraphProvider from "@/context/graph";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-   title: "DrugLedger",
+   title: "VerifyLedger",
    description: "Providing health through traceability",
 };
 

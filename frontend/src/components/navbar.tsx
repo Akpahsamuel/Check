@@ -11,7 +11,7 @@ const Navbar = () => {
    return (
       <>
          <div className="p-3 bg-[#023e8a] text-white flex justify-between items-center px-10 rounded-[3rem] fixed mt-5 m-2 lg:w-[80vw] md:w-[90vw] max-md:w-[95vw] shadow-md">
-            <p className="font-semibold font-serif text-xl gothic">DrugLedger</p>
+            <p className="font-semibold font-serif text-xl gothic">VerifyLedger</p>
 
             <div className='w-fit flex'>
                {/* <button className='px-2' onClick={() => setRegister(false)}>Register</button> */}
