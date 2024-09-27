@@ -1,4 +1,4 @@
-# DrugLedger [site](https://drug-ledger.vercel.app)
+# DrugLedger [site]
 
 This is a decentralized project built with Next.js, Hardhat, and The Graph to ensure transparency and security in the drug supply chain. It provides an explorer for verifying drugs, tracking events, and logging actions securely on the blockchain.
 
