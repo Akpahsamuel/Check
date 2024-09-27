@@ -54,16 +54,16 @@ const DrugModal = ({ close, closeFn, drugId }: { close: boolean, closeFn: Functi
    const handleRetrieve = useCallback(async (_id?: number) => {
 
       const _drugId = (_id !== undefined && _id !== null) ? _id : fields.drugId
-      const query = gql`{
-         logs(where: {drugId: ${_drugId}}) {
-           id
-           drugId
-           entity
-           action
-           transactionHash
-           from
-         }
-       }`
+      // const query = gql`{
+      //    logs(where: {drugId: ${_drugId}}) {
+      //      id
+      //      drugId
+      //      entity
+      //      action
+      //      transactionHash
+      //      from
+      //    }
+      //  }`
       setLoading(true)
       try {
          const drug = await contract.methods.retrieve(_drugId).call()
@@ -72,7 +72,8 @@ const DrugModal = ({ close, closeFn, drugId }: { close: boolean, closeFn: Functi
             toast.error('No drug found with this ID')
             return
          }
-         const logs = await request(url, query)
+         // const logs = await request(url, query)
+         const logs = {}
          const result = await fetch(`/api/files?cid=${drug.cid}`, {
             method: "GET"
          })
